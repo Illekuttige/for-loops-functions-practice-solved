@@ -4,12 +4,16 @@
 // Array example: bankAccounts in /data/data.js
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
+ import { bankAccounts } from "../data/data";
+
 export function getAllClientNames(array) {
-  // Your code goes here...
-
+// Your code goes here...
+let bankAccountHolders = [] 
+for (let names in bankAccounts) {
+  bankAccountHolders.push(array[names].name)
 }
-
-
+return bankAccountHolders
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-5"

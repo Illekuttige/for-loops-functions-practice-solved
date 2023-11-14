@@ -6,7 +6,14 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+let richest = null
 
+for(let i = 0; i < array.length; i++) {
+  if (richest == null || array[i].balance > richest.balance) {
+    richest = array[i]
+  }
+}
+return [richest]
 }
 
 

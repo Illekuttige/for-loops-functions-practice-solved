@@ -5,10 +5,23 @@
 // flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]) => ['d', 'r', 'z', 'b', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
+// [0, 1, 2, [3, 4]]
 export function flatArrays(array) {
   // Your code goes here...
-
+  let flattenedArray = [];
+  for(let i = 0; i < array.length; i++) {
+    if (typeof array[i] === "object" && array[i].length !== undefined){
+      for (let j = 0; j < array[i].length; j++) {
+    flattenedArray.push(array[i][j])
+  }
+} else {
+  flattenedArray.push(array[i]);
 }
+}
+  return flattenedArray
+}
+
+
 
 
 
